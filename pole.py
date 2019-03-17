@@ -4,7 +4,7 @@ MAX_SCORE = 100
 ALPHABET = "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЭЮЯ-"
 
 
-def process_word(word):
+def process_word(word: str):
     return word.replace("ё", "е").upper()
 
 
@@ -17,7 +17,7 @@ def load_vocabulary(filename: str) -> list:
     return vocabulary
 
 
-def calculate_ratio(word) -> int:
+def calculate_ratio(word: str) -> int:
     unique_letters = set()
     for c in word:
         unique_letters.add(c)
@@ -33,14 +33,14 @@ def print_word(word: str, known_chars: set) -> None:
     print()
 
 
-def game_won(word, known_chars) -> bool:
+def game_won(word: str, known_chars: set) -> bool:
     for c in word:
         if c not in known_chars:
             return False
     return True
 
 
-def play(word):
+def play(word: str):
     ratio = calculate_ratio(word)
     score = MAX_SCORE
     known_chars = set()
