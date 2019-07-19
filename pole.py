@@ -1,7 +1,7 @@
 import random
 
 MAX_SCORE = 100
-ALPHABET = "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЭЮЯ-"
+ALPHABET = "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЫЭЮЯ-"
 
 
 def process_word(word: str):
